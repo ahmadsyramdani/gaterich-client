@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-const WS_URL = 'ws://localhost:4000';
+const WS_URL = process.env.REACT_APP_WS_URL || 'ws://localhost:4000';
 
 function App() {
   const [scores, setScores] = useState([]); // [[pair, score], ...]
